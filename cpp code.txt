@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    string msg = "I WILL ALWAYS LOVE YOU";
+    char letters[1000]  = "";
+    for (int i = 0; i < msg.size(); ++i) {
+        for (int j = 'A'; j <= 'Z'; ++j) {
+            letters[i] = char(j);
+            cout << letters << "\n";
+            if(msg[i]==' '){
+                letters[i]=' ';
+                break;
+            }
+            if(letters[i]==msg[i]){
+                letters[i] = msg[i];
+                break;
+            }
+            this_thread::sleep_for(chrono::milliseconds(80));
+        }
+    }
+    cout<<letters<<" <3";
+}
